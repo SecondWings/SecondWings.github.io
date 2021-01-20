@@ -362,7 +362,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-01-20 12:07:42 / Modified: 14:36:59" itemprop="dateCreated datePublished" datetime="2021-01-20T12:07:42+08:00">2021-01-20</time>
+      <time title="Created: 2021-01-20 12:07:42 / Modified: 14:39:39" itemprop="dateCreated datePublished" datetime="2021-01-20T12:07:42+08:00">2021-01-20</time>
     </span>
 
   
@@ -383,7 +383,7 @@
 <li><p>分支命名可以是分层命名（带斜杠）但以下的命名不允许同时存在<br>feature1<br>feature1/v1</p>
 </li>
 </ul>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建ssh密钥</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;邮箱地址&quot;</span></span><br><span class="line"><span class="comment"># 选择保存私钥的文件目录【默认都放在用户目录里的.ssh目录下】</span></span><br><span class="line"><span class="comment"># 默认私钥文件名：id_rsa</span></span><br><span class="line"><span class="comment"># 默认公钥文件名：id_rsa.pub 	</span></span><br><span class="line"><span class="comment"># 设置passphrase [默认为空]</span></span><br><span class="line"><span class="comment"># 再次输入passphrase</span></span><br></pre></td></tr></table></figure>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建ssh密钥</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;邮箱地址&quot;</span></span><br><span class="line"><span class="comment"># 选择保存私钥的文件目录【默认都放在用户目录里的.ssh目录下】</span></span><br><span class="line"><span class="comment"># 默认私钥文件名：id_rsa</span></span><br><span class="line">B</span><br><span class="line"><span class="comment"># 默认公钥文件名：id_rsa.pub 	</span></span><br><span class="line"><span class="comment"># 设置passphrase [默认为空]</span></span><br><span class="line"><span class="comment"># 再次输入passphrase</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看当前Git配置</span></span><br><span class="line">git config --list</span><br><span class="line"><span class="comment"># 编辑Git配置文件</span></span><br><span class="line">$ git config -e [--global]</span><br><span class="line"><span class="comment"># 设置作用域全局的账户名和邮箱地址</span></span><br><span class="line">git config --global user.name <span class="string">&quot;用户名&quot;</span> </span><br><span class="line">git config --global user.email <span class="string">&quot;邮箱地址&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -410,7 +410,7 @@
 <p>每次提交都会显示到日志系统中</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看历史版本</span></span><br><span class="line">git <span class="built_in">log</span> [--pretty=oneline]：只显示commitid +分支信息</span><br><span class="line"><span class="comment"># 显示commit log(按时间线 由近及远)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># head：当前版本，上一个版本：head^，上两个版本：head^^</span></span><br><span class="line"><span class="comment"># 往前100个版本head^100</span></span><br><span class="line"><span class="comment"># 表示当前分支为master，如果切换到其它分支2，会显示(head -&gt; 分支2, master)</span></span><br><span class="line">commit id(sha1)（head -&gt; master）</span><br><span class="line">author</span><br><span class="line">date</span><br><span class="line"></span><br><span class="line">commit message</span><br></pre></td></tr></table></figure>
 
-<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 回退一个版本</span></span><br><span class="line">git reset [-- hard] head^</span><br><span class="line"><span class="comment"># windows的cmd下，^表示换行</span></span><br><span class="line">git reset --hard head~</span><br><span class="line"><span class="comment"># 或</span></span><br><span class="line">git reset --hard head~1</span><br><span class="line"><span class="comment"># 或</span></span><br><span class="line">git reset --hard <span class="string">&quot;head^&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 回退一个版本</span></span><br><span class="line">git reset [-- hard] head^</span><br><span class="line"><span class="comment"># windows的cmd下，^表示换行</span></span><br><span class="line">git reset --hard head~</span><br><span class="line"><span class="comment"># 或</span></span><br><span class="line">B</span><br><span class="line">git reset --hard head~1</span><br><span class="line"><span class="comment"># 或</span></span><br><span class="line">git reset --hard <span class="string">&quot;head^&quot;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="切换到指定版本"><a href="#切换到指定版本" class="headerlink" title="切换到指定版本"></a>切换到指定版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset [--hard] commit id[只需写id的前几位即可]</span><br></pre></td></tr></table></figure>
 
@@ -550,11 +550,6 @@
 </ol>
 <h3 id="其它专业工具"><a href="#其它专业工具" class="headerlink" title="其它专业工具"></a>其它专业工具</h3><p>公钥管理：Gitosis</p>
 <p>权限管理：Gitolite</p>
-<p>TODO</p>
-<blockquote>
-<p>Git命令熟练使用</p>
-<p>IDEA Git使用</p>
-</blockquote>
 
       
     </div>
